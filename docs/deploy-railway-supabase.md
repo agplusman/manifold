@@ -39,16 +39,41 @@ This guide walks you through deploying your own Manifold instance using Railway 
    - Database connection string
 
 3. Run the database migrations:
+   
+   **Option 1: Using Supabase CLI (recommended)**
    ```bash
+   # Install Supabase CLI if not already installed
+   # See: https://supabase.com/docs/guides/cli/getting-started
+   
+   # Link to your Supabase project
+   supabase link --project-ref your-project-ref
+   
+   # Push all migrations to your project
    cd backend/supabase
-   # Apply all SQL files in order
-   # Or use Supabase CLI: supabase db push
+   supabase db push
+   ```
+   
+   **Option 2: Manual SQL execution**
+   ```bash
+   # Navigate to your Supabase project dashboard > SQL Editor
+   # Execute each .sql file in the backend/supabase directory
+   # Note: The order may matter for some files. Start with core tables:
+   #   - users.sql
+   #   - contracts.sql
+   #   - groups.sql
+   #   - contract_bets.sql
+   # Then run the other files as needed
    ```
 
 ## Step 2: Deploy to Railway
 
 ### Option A: One-Click Deploy (Recommended)
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/manifold)
+
+> **Note**: The Railway template needs to be created and published by the repository owner first. Once available, users can deploy with one click using the Railway template.
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template)
+
+Alternatively, you can deploy manually using the steps below.
 
 ### Option B: Manual Setup
 

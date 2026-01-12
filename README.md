@@ -14,11 +14,13 @@ See [`web/README.md`][web-readme] for more details on hacking on the web client.
 
 ## Quick Deploy (Self-Hosted)
 
-Deploy your own Manifold instance with one click:
+> **Note**: Railway template deployment will be available once the template is published by the repository maintainers.
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/manifold)
+Deploy your own Manifold instance:
 
-See [docs/deploy-railway-supabase.md](./docs/deploy-railway-supabase.md) for detailed instructions.
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template)
+
+See [docs/deploy-railway-supabase.md](./docs/deploy-railway-supabase.md) for detailed manual deployment instructions.
 
 **Requirements:**
 - Railway account
