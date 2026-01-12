@@ -12,6 +12,19 @@ This [monorepo][monorepo] has basically everything involved in running and opera
 
 See [`web/README.md`][web-readme] for more details on hacking on the web client.
 
+## Quick Deploy (Self-Hosted)
+
+Deploy your own Manifold instance with one click:
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/manifold)
+
+See [docs/deploy-railway-supabase.md](./docs/deploy-railway-supabase.md) for detailed instructions.
+
+**Requirements:**
+- Railway account
+- Supabase account (for database)
+- Firebase project (for authentication)
+
 ## General architecture
 
 Manifold's public API and web app are hosted by [Vercel][vercel]. Our data has been stored in Firebase's database [Cloud Firestore][cloud-firestore] but we have almost entirely migrated it to SQL hosted on [Supabase][supabase].

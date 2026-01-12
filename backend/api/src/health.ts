@@ -1,8 +1,8 @@
-import { authEndpoint } from './helpers/endpoint'
+import { Request, Response } from 'express'
 
-export const health = authEndpoint(async (_, auth) => {
-  return {
-    message: 'Server is working.',
-    uid: auth.uid,
-  }
-})
+export const health = async (req: Request, res: Response) => {
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  })
+}
